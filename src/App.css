@@ -1,20 +1,29 @@
-
+/**** GLOBAL STYLES *****/
+body {
+  /* background-image: url('snow-christmas-background.jpg'); */
+  background-image: url('/assets/images/snow-red-christmas-background.jpg');
+}
 
 /**** NAVBAR *****/
 
 .apple {
-  background-color: #850808;
+  background-color: #fff822c4;
+  /* background-image: url('snow-christmas-background.jpg'); */
+  background-size: cover;
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
 }
 
 .menu-links {
   color: #00a900;
+  font-family: 'Alata';
 }
 
 
 /**** HOME PAGE *****/
 
 .jumbotron {
-  margin: 0;
+  margin-bottom: 0;
   padding: 30px;
   /* background-image: url("https://cdn.wallpapersafari.com/61/31/9NCh6J.jpg"); */
   background-image: url("https://cdn.wallpapersafari.com/61/31/9NCh6J.jpg");
@@ -23,10 +32,20 @@
   background-size: cover;
 }
 
+.home-container {
+  font-family: 'Sacramento', cursive;
+  padding: 5% 0 10% 0;
+  margin-bottom: 10%;
+}
+
+body-container{
+  font-family: 'Sacramento', cursive;
+}
+
 /* .card-img {
   width: 30%;
 } */
 
-#fishie-img {
+/* #fishie-img {
   width: 20%;
-}
+} */

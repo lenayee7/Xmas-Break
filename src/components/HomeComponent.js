@@ -1,14 +1,29 @@
 import React, { Component } from 'react'
-import { Jumbotron, Container, Card, CardImg, 
-    CardImgOverlay, CardTitle } from 'reactstrap';
-
-
+import { Jumbotron, Container, Card, CardImg,
+    CardTitle, Row, Col, CardBody,
+    CardSubtitle, CardText } from 'reactstrap';
 
 class Home extends Component {
 
     render() {
+        console.log('THESE are the props', this.props)
+        const event = this.props.events.events.map(event => {
+            return(
+                <Card key={event.id}>
+                    <Row>
+                        <Col><CardImg src={event.image} /></Col>
+                        <Col>
+                            <CardBody>
+                                <CardTitle><b>Name of Event:</b> {event.name}</CardTitle>
+                                <CardSubtitle><b>Date:</b> {event.date}</CardSubtitle>
+                                <CardText><b>Family:</b> {event.family}</CardText>
+                            </CardBody>
+                        </Col>
+                    </Row>
+                </Card>                
+            );
+        });
         return (
-
             <React.Fragment>
                <Jumbotron fluid>
                     <div className="container">
@@ -20,13 +35,10 @@ class Home extends Component {
                         </div>
                     </div>
                 </Jumbotron>
-                <Container>
-                    <Card>
-                        <CardImg id="fishie-img" src="./assets/images/baby-fishie.jpg" />
-                        <CardImgOverlay>
-                            <CardTitle>Hey</CardTitle>
-                        </CardImgOverlay>
-                    </Card>                
+                <Container className="body-container">
+                    <div className="col">
+                        {event}
+                    </div>
                 </Container>
             </React.Fragment>
         )
